@@ -150,8 +150,8 @@ iniciar();
 function changeDOM() {
   var imagenRompecabezas = [0,10,20,30,40,50,60,70];
   var elegido = imagenRompecabezas[Math.floor(Math.random()*imagenRompecabezas.length)];
+  document.getElementById("miniFoto").src="./images/"+(elegido + 9 )+".jpg";
   for (var i = 0; i < 8; i++) {
     document.getElementById(i+1).src="./images/"+(elegido + i )+".jpg";
   }
-  document.getElementById("miniFoto").src="./images/"+(elegido + 9 )+".jpg";
-}
+ }
