@@ -25,19 +25,17 @@ function chequearSiGano(){
     for (var x = 0; x < grilla.length; x++) {
       if (grilla[i][x] == solucion[i][x]) {
       posicionCorrecta++;
-    } else {return console.log("false");}
+    } 
   }}
-  if (posicionCorrecta = 10) {
-    return true;
-  } else { return false;}
+  return posicionCorrecta === 10;
 }
 
 // la hacen los alumnos, pueden mostrar el cartel como prefieran. Pero es importante que usen
 // esta función
 function mostrarCartelGanador(){
   if (chequearSiGano()) {
-    alert("Ganaste")
-  } else { return;}
+    alert("Ganaste");
+  }
 }
 
 // Intercambia posiciones grilla y en el DOM
@@ -68,9 +66,7 @@ function actualizarPosicionVacia(nuevaFila,nuevaColumna){
 // Para chequear si la posicón está dentro de la grilla.
 function posicionValida(fila, columna){
 if ((fila  >=0 && fila <=2) && (columna >=0 && columna <=2)){
-  return true;} else {
-    //console.log(false)
-    return false;}
+  return true;}
 }
 
 // Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando
@@ -107,8 +103,7 @@ function moverEnDireccion(direccion){
     intercambiarPosiciones(posicionVacia.fila, posicionVacia.columna,
     nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
     actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
-  } else {//console.log("no valido"); 
-  return;}
+  }
 }
 
 // Extras, ya vienen dadas
@@ -163,9 +158,7 @@ if (((fila == posicionVacia.fila) && ((columna+1 == posicionVacia.columna) || (c
   || ((columna == posicionVacia.columna) && ((fila+1 == posicionVacia.fila) || (fila-1 == posicionVacia.fila)))) {
   //console.log(true);
   return true;
-} else {
-  //console.log(false);
-  return false;}
+  } 
 }
 
 function myId(number){
@@ -180,11 +173,11 @@ function myId(number){
       }
     }
   }  
-  console.log(idImg, filaImg, columnaImg);
+   //console.log(idImg, filaImg, columnaImg);
   if (movimientoValido(filaImg,columnaImg)){
     intercambiarPosiciones(posicionVacia.fila, posicionVacia.columna,
     filaImg, columnaImg);
     actualizarPosicionVacia(filaImg, columnaImg);
-  } else {console.log("no valido");} 
+  }
   mostrarCartelGanador();
 }
