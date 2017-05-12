@@ -180,7 +180,7 @@ function myId(number){
       }
     }
   }  
-  //console.log(idImg, filaImg, columnaImg);
+  console.log(idImg, filaImg, columnaImg);
   if (movimientoValido(filaImg,columnaImg)){
     intercambiarPosiciones(posicionVacia.fila, posicionVacia.columna,
     filaImg, columnaImg);
