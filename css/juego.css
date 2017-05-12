@@ -54,7 +54,7 @@ body {
   min-width: 60%;
   min-height: 60%;
 }
-img, #vacia {
+img {
   padding: 0px;
   box-sizing: content-box;
   width: 25%;
