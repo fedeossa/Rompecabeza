@@ -155,3 +155,36 @@ function changeDOM() {
     document.getElementById(i+1).src="./images/"+(elegido + i )+".jpg";
   }
  }
+
+//CONTROLES MOUSE
+
+function movimientoValido(fila,columna){
+if (((fila == posicionVacia.fila) && ((columna+1 == posicionVacia.columna) || (columna-1 == posicionVacia.columna)))
+  || ((columna == posicionVacia.columna) && ((fila+1 == posicionVacia.fila) || (fila-1 == posicionVacia.fila)))) {
+  //console.log(true);
+  return true;
+} else {
+  //console.log(false);
+  return false;}
+}
+
+function myId(number){
+  var idImg = document.getElementById(number).id;
+  var filaImg;
+  var columnaImg;
+  for (var i = 0; i < grilla.length; i++) {
+    for (var x = 0; x < grilla.length; x++) {
+      if (grilla[i][x] == idImg) {
+      filaImg = i;
+      columnaImg = x;
+      }
+    }
+  }  
+  //console.log(idImg, filaImg, columnaImg);
+  if (movimientoValido(filaImg,columnaImg)){
+    intercambiarPosiciones(posicionVacia.fila, posicionVacia.columna,
+    filaImg, columnaImg);
+    actualizarPosicionVacia(filaImg, columnaImg);
+  } else {console.log("no valido");} 
+  mostrarCartelGanador();
+}
