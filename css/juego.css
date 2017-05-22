@@ -68,6 +68,19 @@ footer {
   background-color: black;
   color: white;
 }
+a:link {
+  color: white;
+  text-decoration-color: none;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+a:visited {
+  color: white;
+  background-color: white;
+}
 #miniFoto {
   display: block;
   height: 70%;
