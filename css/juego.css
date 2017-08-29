@@ -1,12 +1,13 @@
 
-
 /*Código armado por La Foca Loca S.A. No modificar*/
 body {
   font-family: Arial, sans-serif;
   width: 940px;
-  margin: 5% auto;
-  min-height: 100%;
-  background-image: url(../images/adventure.jpg);
+  margin: 2% auto;
+  max-height: 100%;
+  background-image: url("../images/paisaje.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 ul {
   padding-left: 0;
@@ -27,7 +28,7 @@ li::before {
 }
 .col-40 {
   background: #FFF;
-  padding: 30px;
+  padding: 20px;
   color: #000;
 }
 
@@ -46,19 +47,45 @@ li::before {
 body {
   max-height: 940px;
 }
-
+h1, h2 {
+  margin: 0.5em;
+}
+#miniFoto {
+  display: block;
+  height: 60%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#botonera {
+  box-sizing: content-box;
+  font-size: 20px;
+  padding-top: 0%;
+  text-align: center;
+}
 .col-60 {
   align-content: center;
-  box-sizing: content-box;
-  padding: 1%;
-  min-width: 60%;
-  min-height: 60%;
+  box-sizing: border-box;
+  width: 60%;
+  height: 60%;
+  max-height: 60%;
+  max-width: 60%;
+  border-bottom: 2px solid #000;  
 }
-#juego img {
-  padding: 0px;
-  box-sizing: content-box;
-  width: 25%;
-  height: 25%;
+#juego {
+  margin: auto;
+}
+#juego div {
+  float: left;
+  margin: auto;  
+  width: 33.333%;
+  height: 33.333%;
+  box-sizing: border-box;
+}
+#juego div img {
+  max-width: 100%;
+  display: block;
 }
 footer {
   margin-left: auto;
@@ -67,6 +94,10 @@ footer {
   float: none;
   background-color: black;
   color: white;
+}
+footer p {
+  margin: 0px auto;
+  padding: 0.5%;
 }
 a:link {
   color: white;
@@ -80,17 +111,4 @@ a:hover {
 a:visited {
   color: white;
   background-color: white;
-}
-#miniFoto {
-  display: block;
-  height: 70%;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-#botonera {
-  font-size: 20px;
-  padding-top: 5%;
-  text-align: center;
 }
