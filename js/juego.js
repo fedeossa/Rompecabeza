@@ -6,12 +6,6 @@ var grilla = [
   [7, 8, 9]
 ];
 
-var solucion = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
-];
-
 // Ac&aacute; vamos a ir guardando la posición vacía
 var posicionVacia = {
   fila:2,
@@ -21,13 +15,16 @@ var posicionVacia = {
 // Esta función va a chequear si el Rompecabezas est&aacute; en la posición ganadora
 function chequearSiGano(){
   var posicionCorrecta = 1;
+  var solucion = 10;
   for (var i = 0; i < grilla.length; i++) {
     for (var x = 0; x < grilla.length; x++) {
-      if (grilla[i][x] == solucion[i][x]) {
+      if (grilla[i][x] == posicionCorrecta) {
       posicionCorrecta++;
-    } 
+    } else {
+      posicionCorrecta = 1;
+    }
   }}
-  return posicionCorrecta === 10;
+  return posicionCorrecta === solucion;
 }
 
 // la hacen los alumnos, pueden mostrar el cartel como prefieran. Pero es importante que usen
